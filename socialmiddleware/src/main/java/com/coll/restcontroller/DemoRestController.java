@@ -1,4 +1,4 @@
-package com.social.controller;
+package com.coll.restcontroller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -6,11 +6,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class GenericRestController 
+public class DemoRestController 
 {
 	@GetMapping("/demo")
-	public ResponseEntity<String> checkDemo()
+	public ResponseEntity<String> demoImpl()
 	{
-		return new ResponseEntity<String>("demo",HttpStatus.OK);
+		System.out.println("----demo Restful API_---");
+		return new ResponseEntity("Welcome to Rest Controller",HttpStatus.OK);
 	}
 }
